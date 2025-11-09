@@ -4,142 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project X | Presentación One-Page</title>
+    <title>Proyecto InterpretAR | Presentación One-Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <style>
-        /* Estilos generales */
-        section {
-            padding-top: 5rem;
-            /* Espacio para la barra de navegación fija */
-            padding-bottom: 5rem;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Estilo clave para el carrusel en el Hero: 
-           Asegura que la sección contenedora ocupe toda la altura 
-        */
-        #hero {
-            min-height: 100vh;
-            position: relative;
-            /* Necesario para posicionar correctamente la superposición y el texto */
-            overflow: hidden;
-            /* Oculta cualquier desbordamiento del carrusel */
-        }
-
-        /* Estilo para las imágenes del carrusel */
-        #hero .carousel-item {
-            height: 100vh;
-            /* Cada slide debe ocupar toda la altura */
-        }
-
-        #hero .carousel-item img {
-            object-fit: cover;
-            /* Asegura que la imagen cubra todo el espacio sin distorsión */
-            height: 100%;
-            width: 100%;
-            filter: brightness(0.6);
-            /* Oscurece las imágenes para mejorar la legibilidad del texto */
-        }
-
-        /* Capa de superposición para el texto (Opcional, pero recomendado) */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-            /* Capa oscura adicional */
-            z-index: 2;
-            /* Sobre las imágenes del carrusel */
-        }
-
-        /* Contenedor del texto del Hero */
-        .hero-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 3;
-            /* Sobre la capa de superposición */
-            /* Centrado del contenido con flexbox */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-
-        #about,
-        #features,
-        #team,
-        #technologies {
-            min-height: 100vh;
-            /* Ocupa al menos el 100% de la altura de la ventana */
-
-            /* Aseguramos el padding para compensar la barra de navegación fija */
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-
-            /* Opcional: Centrar el contenido verticalmente para una mejor presentación */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        /* Estilo base para todas las Cards con sombra y transición */
-        .card-hover-effect {
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            border: 1px solid #dee2e6;
-            /* Marco inicial sutil (color gris claro de Bootstrap) */
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
-            /* Sombra ligera por defecto */
-        }
-
-        /* Efecto Hover: Levantamiento y Sombra más pronunciada, y borde de color primario */
-        .card-hover-effect:hover {
-            transform: translateY(-5px);
-            /* Levanta la tarjeta 5px */
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-            /* Sombra grande y más oscura */
-            border-color: var(--bs-primary) !important;
-            /* El marco se vuelve del color primario de Bootstrap */
-        }
-
-        /* Estilo para los iconos del footer */
-        footer a {
-            color: #fff;
-            /* Asegura que el color inicial del icono sea blanco */
-            text-decoration: none;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-            /* Transición suave */
-            font-size: 1.5rem;
-            /* Ajuste opcional del tamaño */
-        }
-
-        /* Efecto Hover: Brillo/Iluminación */
-        footer a:hover {
-            /* Color de iluminación (ej. un azul eléctrico) */
-            color: #00ffff;
-
-            /* Crea el efecto de iluminación: 
-       Offset-x, Offset-y, Blur-radius, Color del brillo.
-       Usamos múltiples sombras para un brillo más denso. */
-            text-shadow:
-                0 0 10px #00ffff,
-                /* Brillo medio */
-                0 0 20px #00ffff,
-                /* Brillo más suave */
-                0 0 30px #00ffff;
-            /* Brillo extendido */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
@@ -222,7 +91,7 @@
                         Visualizamos un mundo donde las barreras comunicacionales se eliminan. Nuestra visión es
                         comunicar a todas las personas sin importar su lenguaje.
                     </p>
-                    <a href="#" class="btn btn-outline-primary mt-3">Saber Más</a>
+                    <a href="#contact" class="btn btn-outline-primary mt-3">Saber Más</a>
                 </div>
                 <div class="col-lg-6 order-lg-1 mt-4 mt-lg-0">
                     <img src="https://picsum.photos/600/400?random=2" class="img-fluid rounded shadow-lg"
@@ -274,21 +143,21 @@
     </section>
     <hr class="my-0">
 
-    <section id="features">
+    <section id="features" class="bg-light">
         <div class="container text-center">
             <h2 class="display-4 fw-bold mb-5 text-dark">Características que Amarán</h2>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 card-hover-effect p-4 text-center">
-                        <i class="bi bi-shield-lock-fill display-3 text-success mb-3"></i>
-                        <h4 class="card-title fw-bold">Sin Coneccion</h4>
+                        <i class="bi bi-wifi-off display-3 text-success mb-3"></i>
+                        <h4 class="card-title fw-bold">Sin Conexión</h4>
                         <p class="card-text">Implementamos encriptación de extremo a extremo y protocolos de seguridad
                             de nivel bancario.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 card-hover-effect p-4 text-center">
-                        <i class="bi bi-speedometer2 display-3 text-warning mb-3"></i>
+                        <i class="bi bi-github display-3 text-dark mb-3"></i>
                         <h4 class="card-title fw-bold">Open Source</h4>
                         <p class="card-text">Nuestros servidores de última generación garantizan una velocidad y una
                             respuesta inigualables.</p>
@@ -297,7 +166,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 card-hover-effect p-4 text-center">
                         <i class="bi bi-phone-fill display-3 text-danger mb-3"></i>
-                        <h4 class="card-title fw-bold">Disponible en todos los dispositivos/h4>
+                        <h4 class="card-title fw-bold">Disponible en todos los dispositivos</h4>
                         <p class="card-text">Experiencia de usuario fluida y optimizada en cualquier dispositivo, de
                             escritorio a móvil.</p>
                     </div>
@@ -315,7 +184,7 @@
     </section>
     <hr class="my-0">
 
-    <section id="team" class="bg-light">
+    <section id="team">
         <div class="container text-center">
             <h2 class="display-4 fw-bold mb-5 text-primary">Conoce a Nuestro Equipo</h2>
             <div class="row justify-content-center g-4">
@@ -325,27 +194,26 @@
                             alt="Miembro del equipo" style="width: 150px; height: 150px; object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Tatiana B. Ponce</h5>
-                            <p class="text-muted"></p>
-                            <p class="card-text small">Visionaria y estratega, lidera la dirección y el futuro de
-                                Project X.</p>
+                            <p class="text-muted">Desarrolladora IA</p>
+                            <p class="card-text small">Implementacion de tecnologias necesarias para llevar a cabo el proyecto.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 card-hover-effect p-3 text-center">
-                        <img src="https://picsum.photos/300/300?random=4" class="rounded-circle mx-auto mt-3"
+                        <img src="source/img/Ian.jpeg " class="rounded-circle mx-auto mt-3"
                             alt="Miembro del equipo" style="width: 150px; height: 150px; object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Ian A. Rindisbacher</h5>
-                            <p class="text-muted">Desarrollador Principal</p>
-                            <p class="card-text small">Arquitecto del código, asegura que la plataforma sea robusta y
+                            <p class="text-muted">Desarrollador Fullstack</p>
+                            <p class="card-text small">Diseño del código, asegura que la plataforma sea confiable y
                                 escalable.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 card-hover-effect p-3 text-center">
-                        <img src="https://picsum.photos/300/300?random=5" class="rounded-circle mx-auto mt-3"
+                        <img src="/source/img/Killa.jpeg" class="rounded-circle mx-auto mt-3"
                             alt="Miembro del equipo" style="width: 150px; height: 150px; object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Killa</h5>
@@ -394,12 +262,11 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 Project X. Todos los derechos reservados.</p>
+                    <p class="mb-0">&copy; 2025 InterpretAR.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-5"></i></a>
-                    <a href="#" class="text-light me-3"><i class="bi bi-twitter fs-5"></i></a>
-                    <a href="#" class="text-light"><i class="bi bi-linkedin fs-5"></i></a>
+                    <a href="https://github.com/Tati650/ProyectoFinalSw" class="text-light me-3"><i class="bi bi-github fs-5"></i></a>
+                    <a href="https://wa.me/5434244444444" class="text-light me-3"><i class="bi bi-whatsapp fs-5"></i></a>
                 </div>
             </div>
         </div>
@@ -410,20 +277,9 @@
     </script>
 
     <script>
-        // JS para mejorar el smooth scroll en navegadores que no lo soportan nativamente
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Opcional: Despliega un mensaje de éxito al enviar el formulario (simulado)
         document.querySelector('#contact form').addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('¡Gracias! Tu mensaje ha sido enviado con éxito (Simulación)');
+            alert('¡Gracias! Tu mensaje ha sido enviado con éxito');
             this.reset();
         });
     </script>

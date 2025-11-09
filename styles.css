@@ -1,0 +1,130 @@
+/* Estilos generales */
+section {
+    padding-top: 5rem;
+    /* Espacio para la barra de navegación fija */
+    padding-bottom: 5rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo clave para el carrusel en el Hero: 
+        Asegura que la sección contenedora ocupe toda la altura 
+    */
+#hero {
+    min-height: 100vh;
+    position: relative;
+    /* Necesario para posicionar correctamente la superposición y el texto */
+    overflow: hidden;
+    /* Oculta cualquier desbordamiento del carrusel */
+}
+
+/* Estilo para las imágenes del carrusel */
+#hero .carousel-item {
+    height: 100vh;
+    /* Cada slide debe ocupar toda la altura */
+}
+
+#hero .carousel-item img {
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo el espacio sin distorsión */
+    height: 100%;
+    width: 100%;
+    filter: brightness(0.6);
+    /* Oscurece las imágenes para mejorar la legibilidad del texto */
+}
+
+/* Capa de superposición para el texto (Opcional, pero recomendado) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* Capa oscura adicional */
+    z-index: 2;
+    /* Sobre las imágenes del carrusel */
+}
+
+/* Contenedor del texto del Hero */
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    /* Sobre la capa de superposición */
+    /* Centrado del contenido con flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#about,
+#features,
+#team,
+#technologies {
+    min-height: 100vh;
+    /* Ocupa al menos el 100% de la altura de la ventana */
+
+    /* Aseguramos el padding para compensar la barra de navegación fija */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    /* Opcional: Centrar el contenido verticalmente para una mejor presentación */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilo base para todas las Cards con sombra y transición */
+.card-hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #dee2e6;
+    /* Marco inicial sutil (color gris claro de Bootstrap) */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
+    /* Sombra ligera por defecto */
+}
+
+/* Efecto Hover: Levantamiento y Sombra más pronunciada, y borde de color primario */
+.card-hover-effect:hover {
+    transform: translateY(-5px);
+    /* Levanta la tarjeta 5px */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    /* Sombra grande y más oscura */
+    border-color: var(--bs-primary) !important;
+    /* El marco se vuelve del color primario de Bootstrap */
+}
+
+/* Estilo para los iconos del footer */
+footer a {
+    color: #fff;
+    /* Asegura que el color inicial del icono sea blanco */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Transición suave */
+    font-size: 1.5rem;
+    /* Ajuste opcional del tamaño */
+}
+
+/* Efecto Hover: Brillo/Iluminación */
+footer a:hover {
+    /* Color de iluminación (ej. un azul eléctrico) */
+    color: #00ffff;
+
+    /* Crea el efecto de iluminación: 
+    Offset-x, Offset-y, Blur-radius, Color del brillo.
+    Usamos múltiples sombras para un brillo más denso. */
+    text-shadow:
+        0 0 10px #00ffff,
+        /* Brillo medio */
+        0 0 20px #00ffff,
+        /* Brillo más suave */
+        0 0 30px #00ffff;
+    /* Brillo extendido */
+}
