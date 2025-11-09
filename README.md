@@ -1,2 +1,6 @@
-# ProyectoFinalSw
-Proyecto final software de Ponce Tatiana y Rindisbacher Ian.
+# Proyecto Final Software
+
+ Alumnos: Ponce Tatiana y Rindisbacher Ian.
+p
+ Profesora: Fantini Fani.
+## Descripcion
